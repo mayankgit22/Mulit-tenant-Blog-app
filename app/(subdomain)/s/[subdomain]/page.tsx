@@ -7,7 +7,7 @@ type paramsType = {
     subdomain: string
 }
 export default async function SubdomainLayout({params}: {params: paramsType}){
-const { subdomain } = await params;
+const { subdomain } =  params;
 const client=clerkClient();
 const org =(await client).organizations.getOrganization({slug:subdomain});
 // console.log(org);
