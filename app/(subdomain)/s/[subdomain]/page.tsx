@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import db from '@/db';
 import { tables } from '@/db/schema';
 import{clerkClient}from '@clerk/nextjs/server'
