@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import db from '@/db';
 import { tables } from '@/db/schema';
 import{clerkClient}from '@clerk/nextjs/server'
@@ -8,6 +7,7 @@ import{eq}from 'drizzle-orm'
 type paramsType = {
     subdomain: string
 }
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default async function SubdomainLayout({params}: {params: paramsType}){
 const { subdomain } = await params;
 const client= await clerkClient();
