@@ -5,7 +5,7 @@ import { createBlog } from "@/app/action";
 import { useOrganization } from "@clerk/nextjs";
 // import { on } from "events";mport Image from "next/image";
 import { useRef } from "react";
-import Link from "next/link";
+
 export default function OrginizationPage() {
 
 const fileInputRef = useRef<HTMLInputElement>(null);
