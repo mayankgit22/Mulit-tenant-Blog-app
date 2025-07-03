@@ -7,12 +7,12 @@ type paramsType = {
     subdomain: string
 }
 export default async function SubdomainLayout({params}: {params: paramsType}){
-const { subdomain } =  params;
-const client=clerkClient();
-const org =(await client).organizations.getOrganization({slug:subdomain});
+const { subdomain } = await params;
+const client= await clerkClient();
+const org = await client.organizations.getOrganization({slug:subdomain});
 // console.log(org);
 if(!org){alert("please enter correst organization name or create new organization")}
-const orgId1=(await org).id;
+const orgId1=(org).id;
  const blogs1= await db.select().from(tables).where(eq(tables.orgId,orgId1));
 
     return(<>

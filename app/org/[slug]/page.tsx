@@ -5,7 +5,7 @@ import { createBlog } from "@/app/action";
 import { useOrganization } from "@clerk/nextjs";
 // import { on } from "events";mport Image from "next/image";
 import { useRef } from "react";
-
+import Link from "next/link";
 export default function OrginizationPage() {
 
 const fileInputRef = useRef<HTMLInputElement>(null);
@@ -67,6 +67,8 @@ const resetFileInput = () => {
   return (
     <div className="w-screen relative">
       <Nav />
+      {/* <Link href={`/s/${organization?.slug}`}>Go to My Blog</Link> */}
+
       <h3 className="text-center">your domain is <a className="text-blue-400" href="">{organization?.slug}.com </a> 
          you can check out you blog on this
       </h3>
