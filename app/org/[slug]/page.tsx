@@ -69,9 +69,18 @@ const resetFileInput = () => {
       <Nav />
       {/* <Link href={`/s/${organization?.slug}`}>Go to My Blog</Link> */}
 
-      <h3 className="text-center">your domain is <a className="text-blue-400" href={`sometjing.jaydeepraj.site/s/${organization.slug}`}>sometjing.jaydeepraj.site/s/{organization?.slug}</a> 
-         you can check out you blog on this
-      </h3>
+{organization?.slug && (
+  <h3 className="text-center">
+    your domain is{" "}
+    <a
+      className="text-blue-400"
+      href={`https://sometjing.jaydeepraj.site/s/${organization.slug}`}
+    >
+      https://sometjing.jaydeepraj.site/s/{organization.slug}
+    </a>
+  </h3>
+)}
+
       <form onSubmit={(e)=>{
         e.preventDefault();
         handleCreate();
