@@ -101,6 +101,7 @@ const resetFileInput = () => {
           className="w-[60%] h-[40vh] bg-gray-500/70 rounded-md text-black font-semibold p-2"
         />
         <input accept="image/*"   ref={fileInputRef} className="bg-blue-500 text-md rounded-3xl p-2 m-1 cursor-pointer" type="file" onChange={handleImg} />
+        <p>please upload img of size 0-2 mb</p>
         <button
           type="submit"
           // onClick={handleCreate}
