@@ -31,7 +31,10 @@ export default function RootLayout({
       >
         <SignedOut>
           {/* <SignInButton/> */}
-          <div className="flex h-screen justify-center items-center"><SignIn /></div>
+          <div className="flex h-screen justify-center items-center">
+          <h2>If You are new User please click signUp</h2>
+            <SignIn />
+          </div>
         </SignedOut>
         {children}
 
