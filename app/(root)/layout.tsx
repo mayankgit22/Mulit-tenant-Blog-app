@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { ClerkProvider, SignedOut, SignIn,SignedIn } from "@clerk/nextjs";
+import { ClerkProvider, SignedOut, SignIn, SignedIn } from "@clerk/nextjs";
 
 import { Roboto } from 'next/font/google';
 
@@ -20,24 +20,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.className}>
       <ClerkProvider>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <SignedOut>
-          {/* <SignInButton/> */}
-          <div className="flex h-screen justify-center items-center">
-          <h2>If You are new User please click signUp</h2><br/>
-            <SignIn />
-          </div>
-        </SignedOut>
-        
-     <SignedIn>
+        <body className="antialiased">
+          <SignedOut>
+            <div className="flex h-screen justify-center items-center">
+              <h2>If you are a new user, please click Sign Up</h2>
+              <SignIn />
+            </div>
+          </SignedOut>
+
+          <SignedIn>
             {children}
           </SignedIn>
-
-      </body></ClerkProvider>
+        </body>
+      </ClerkProvider>
     </html>
   );
 }
