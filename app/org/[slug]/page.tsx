@@ -71,7 +71,7 @@ const resetFileInput = () => {
 
 {organization?.slug && (
   <h3 className="text-center">
-    your domain is{" "}
+   All can check out your blogs at{" "}
     <a
       className="text-blue-400"
       href={`https://sometjing.jaydeepraj.site/s/${organization.slug}`}
