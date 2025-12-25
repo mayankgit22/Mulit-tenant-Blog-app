@@ -21,6 +21,9 @@
     "dotenv": "^16.6.0",
     "drizzle-orm": "^0.44.2",
     "pg": "^8.16.3",
+        "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19",
 
     "clsx": "^2.1.1",
     "class-variance-authority": "^0.7.1",
