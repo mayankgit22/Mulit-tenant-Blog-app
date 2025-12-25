@@ -24,8 +24,8 @@ export default function RootLayout({
       <ClerkProvider>
         <body className="antialiased">
           <SignedOut>
-            <div className="flex h-screen justify-center items-center">
-              <h2>If you are a new user, please click Sign Up</h2>
+            <div className="flex flex-col gap-3 h-screen  justify-center items-center">
+              <h1>If you are a new user, Please click Sign Up</h1>
               <SignIn />
             </div>
           </SignedOut>
