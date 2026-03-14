@@ -3,8 +3,133 @@
 @tailwind utilities;
 @import "tw-animate-css";
 
+/* ── Base theme ─────────────────────────────────────────── */
+:root {
+  --background: #0f0f14;
+  --foreground: #e8e8f0;
+  --card: #1a1a24;
+  --card-border: rgba(255, 255, 255, 0.07);
+  --primary: #6c63ff;
+  --primary-glow: #6c63ff40;
+  --accent: #00d4aa;
+  --muted: #2a2a3a;
+  --muted-foreground: #8b8ba7;
+  --input-bg: #1e1e2e;
+  --input-border: rgba(255, 255, 255, 0.1);
+  --success: #00d4aa;
+  --danger: #ff5577;
+}
 
+/* ── Body defaults ──────────────────────────────────────── */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ── Glass card ─────────────────────────────────────────── */
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+}
+
+/* ── Gradient text ──────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #6c63ff 0%, #00d4aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Primary button ─────────────────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, #6c63ff 0%, #5a52e0 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.625rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px var(--primary-glow);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Form inputs ────────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.625rem;
+  padding: 0.75rem 1rem;
+  color: var(--foreground);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--muted-foreground);
+}
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+/* ── Blog card ──────────────────────────────────────────── */
+.blog-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.15);
+}
+
+/* ── Step badge ─────────────────────────────────────────── */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6c63ff, #00d4aa);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── ShadCN dark overrides ──────────────────────────────── */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -38,6 +163,4 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-
 
