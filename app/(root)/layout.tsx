@@ -65,9 +65,8 @@ export default function RootLayout({
                 </p>
               </div>
               <div className="relative animate-fade-in-up delay-200">
-                <SignIn />
+                <SignIn routing="hash" />
               </div>
-              <SignIn routing="hash" />
             </div>
           </SignedOut>
 

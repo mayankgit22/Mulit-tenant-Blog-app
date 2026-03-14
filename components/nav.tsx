@@ -38,6 +38,7 @@ const Nav: React.FC = () => {
       <div className="flex items-center gap-3">
         <OrganizationSwitcher
           afterSelectOrganizationUrl={(org) => `/org/${org.slug}`}
+          afterSelectPersonalUrl="/"
           appearance={{
             elements: {
               rootBox: "flex items-center",
