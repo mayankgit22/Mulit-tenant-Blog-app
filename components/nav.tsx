@@ -6,35 +6,30 @@ import * as React from "react";
 const Nav: React.FC = () => {
   return (
     <nav
+      className="flex justify-between items-center px-6 py-3.5 sticky top-0 z-50"
       style={{
-        background: "rgba(26, 26, 36, 0.85)",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
-        backdropFilter: "blur(16px)",
-        WebkitBackdropFilter: "blur(16px)",
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
+        background: "rgba(9, 9, 11, 0.8)",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
       }}
-      className="flex justify-between items-center px-6 py-3"
     >
       {/* Brand */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2.5">
         <span
+          className="inline-flex items-center justify-center"
           style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
             width: "2rem",
             height: "2rem",
             borderRadius: "0.5rem",
-            background: "linear-gradient(135deg, #6c63ff 0%, #00d4aa 100%)",
+            background: "linear-gradient(135deg, #7c6cff 0%, #00e5b0 100%)",
           }}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
           </svg>
         </span>
-        <span className="text-lg font-bold" style={{ color: "#e8e8f0", letterSpacing: "-0.02em" }}>
+        <span className="text-lg font-bold tracking-tight" style={{ color: "#f0f0f5" }}>
           BlogSpace
         </span>
       </div>
@@ -47,14 +42,14 @@ const Nav: React.FC = () => {
             elements: {
               rootBox: "flex items-center",
               organizationSwitcherTrigger:
-                "rounded-lg px-3 py-1.5 text-sm font-medium text-[#e8e8f0] hover:bg-white/5 transition-colors",
+                "rounded-lg px-3 py-1.5 text-sm font-medium text-[#f0f0f5] hover:bg-white/5 transition-colors",
             },
           }}
         />
         <UserButton
           appearance={{
             elements: {
-              avatarBox: "w-8 h-8 ring-2 ring-[#6c63ff]/40",
+              avatarBox: "w-8 h-8 ring-2 ring-[#7c6cff]/30",
             },
           }}
         />
