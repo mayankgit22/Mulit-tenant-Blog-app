@@ -44,7 +44,7 @@ export default function RootLayout({
                 </h1>
                 <p style={{ color: "var(--muted-foreground)" }}>Sign in to manage your multi-tenant blog</p>
               </div>
-              <SignIn />
+              <SignIn routing="hash" />
             </div>
           </SignedOut>
 
