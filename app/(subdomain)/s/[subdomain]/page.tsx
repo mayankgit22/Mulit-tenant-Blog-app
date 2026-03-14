@@ -5,14 +5,10 @@ import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { eq } from "drizzle-orm";
 
-type paramsType = {
-  subdomain: string;
-};
-
 export default async function SubdomainLayout({
   params,
 }: {
-  params: paramsType;
+  params: Promise<{ subdomain: string }>;
 }) {
   const { subdomain } = await params;
   const client = await clerkClient();
