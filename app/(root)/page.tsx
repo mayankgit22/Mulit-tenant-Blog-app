@@ -1,5 +1,7 @@
 import Nav from "../../components/nav";
 
+const delayClasses = ["", "delay-100", "delay-200", "delay-300", "delay-400", "delay-500"];
+
 const steps = [
   {
     number: 1,
@@ -187,7 +189,7 @@ export default function Home() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className={`glass-card gradient-border p-6 flex gap-4 items-start animate-fade-in-up delay-${(i + 1) * 100}`}
+              className={`glass-card gradient-border p-6 flex gap-4 items-start animate-fade-in-up ${delayClasses[i + 1] || ""}`}
             >
               <div
                 className="feature-icon"
@@ -238,7 +240,7 @@ export default function Home() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`glass-card gradient-border p-7 flex flex-col gap-4 animate-fade-in-up delay-${(i + 1) * 100}`}
+              className={`glass-card gradient-border p-7 flex flex-col gap-4 animate-fade-in-up ${delayClasses[i + 1] || ""}`}
             >
               <div className="flex items-center gap-3">
                 <span className="step-badge">{step.number}</span>

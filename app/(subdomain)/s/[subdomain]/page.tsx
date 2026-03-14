@@ -5,6 +5,8 @@ import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { eq } from "drizzle-orm";
 
+const delayClasses = ["", "delay-100", "delay-200", "delay-300", "delay-400", "delay-500"];
+
 type paramsType = {
   subdomain: string;
 };
@@ -166,7 +168,7 @@ export default async function SubdomainLayout({
             {blogs1.map((blog, index) => (
               <article
                 key={blog.id}
-                className={`blog-card animate-fade-in-up delay-${Math.min((index + 1) * 100, 500)}`}
+                className={`blog-card animate-fade-in-up ${delayClasses[Math.min(index + 1, 5)] || ""}`}
               >
                 {blog.imgUrl && (
                   <div className="relative w-full" style={{ height: 240 }}>
